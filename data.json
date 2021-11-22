@@ -1,0 +1,8 @@
+{
+    "date": "2021-11-17",
+    "forecast":
+            [
+              {"time": "morning", "weather": "sunny"},
+              {"time": "afternoon","weather": "raining"}
+            ]
+}
