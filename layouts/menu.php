@@ -1,3 +1,5 @@
-<div>
-    <p>This is menu page</p>
-</div>
+
+<?php
+session_start();
+include "products.php";
+?>
