@@ -1,16 +1,19 @@
-<div>
-    <h1>My First Google Map</h1>
-
-    <div id="googleMap" style="width:100%;height:400px;"></div>
-
-    <script>
-        function myMap() {
-            var mapProp= {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
+<!--The div element for the map -->
+    <div id="map">
+    <script src="../scripts/map.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgAFPcYBZfYnrB3aD5EK5qVA5toZj_Cso&callback=initMap&libraries=&v=weekly"
+            async>
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgAFPcYBZfYnrB3aD5EK5qVA5toZj_Cso&callback=initMap"></script>
-</div>
+    </div>
+
+    <style ="text/css">
+    /* Set the size of the div element that contains the map */
+    #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+    }
+    </style>

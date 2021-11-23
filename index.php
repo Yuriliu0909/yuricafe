@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <title>yuri cafe</title>
@@ -8,6 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="styles/index.css">
     </head>
+
 <body>
         <!-- Navbar content -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -43,22 +43,20 @@
 
 
     <div id="tabcontent" class="container-fluid">
-        <div class="tab-content" id="home-content">
-            <h3>Home</h3>
-            <embed type="text/html" src="layouts/home-tab-contents.php">
+        <div  class="tab-content" id="home-content">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/home-tab-contents.php">
         </div>
         <div class="tab-content" id="menu-content">
             <h3>Menu</h3>
-            <embed type="text/html" src="layouts/menu.php">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/menu.php">
         </div>
         <div class="tab-content" id="location-content">
-            <h3>Location</h3>
-            <embed type="text/html" src="layouts/location.php">
+            <h4 style="align-content: center">No.999 Yuri Street,Te Aro,Wellington</h4>
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/location.php">
         </div>
         <div class="tab-content" id="cart-content">
             <h3>Cart</h3>
-            <embed type="text/html" src="layouts/shoppingcart.php">
-
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/shoppingcart.php">
         </div>
     </div>
 
@@ -71,8 +69,7 @@
 
     <!-- And here is our main footer that is used across all the pages of our website -->
     <?php require_once "layouts/function.php"?>
-    <footer>
-        Hours:07:00-15:00 Mon-Sun
+    <footer style="position: fixed; bottom:0;margin-top: 0">
         <?php echo make_copyright("Yuri");?>
     </footer>
 </body>

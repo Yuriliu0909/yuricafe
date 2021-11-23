@@ -1,26 +1,19 @@
 <?php
-
-
 $_POST = json_decode(file_get_contents('php://input'), true);
+include ('db-config.php');
+$results = array();
 
-$result = array();
+if($_POST['req'] == 'menu') {
+    $sql = "SELECT * FROM coffee";
+    $result = $conn->query($sql);
 
-if($_POST['req'] == 'get-data') {
-    //Read the data from the database
-    //Convert into JSON array
-    //Send to the client
-    $data = array(
-        array("id"=>"5", "name"=>"coffee", "price"=>"100"),
-        array("id"=>"10", "name"=>"tea", "price"=>"150")
-    );
-    echo json_encode($data);
-} elseif($_POST['req'] == 'update-data') {
-    $data = $_POST['data'];
-    //Have to update database here
-    $data = array(
-        array("id"=>"5", "name"=>"coffee", "price"=>$data['price']),
-        array("id"=>"10", "name"=>"tea", "price"=>"150")
-    );
-    echo json_encode($data);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $data = array('id'=>$row['id'], 'name'=>$row['name'], 'quantity'=>$row['quantity'], 'price'=>$row['price']);
+            $results[] = $data;
+        }
+    }
+    $conn->close();
+    echo json_encode($results);
 }
 
