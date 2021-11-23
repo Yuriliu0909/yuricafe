@@ -1,17 +1,9 @@
 <div>
-    <p>This is shoppingcart page</p>
-
-
-
-
-
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-
-
-
+    <link href="../styles/shoppingcart.css" rel="stylesheet">
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/shoppingcart.js"></script>
     <div class="container">
         <div class="row g-5">
             <div class="col-md-5 col-lg-4 order-md-last">
@@ -216,12 +208,5 @@
             </div>
         </div>
     </div>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="../scripts/shoppingcart.js"></script>
-
-
 </div>
 
