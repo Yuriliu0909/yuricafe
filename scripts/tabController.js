@@ -2,6 +2,8 @@ const homeTabBtn = document.getElementById('home-tab');
 const menuTabBtn = document.getElementById('menu-tab');
 const locationTabBtn = document.getElementById('location-tab');
 const cartTabBtn = document.getElementById('cart-tab');
+const coffeeTabBtn = document.getElementById('coffee-tab');
+const pastryTabBtn = document.getElementById('pastry-tab');
 
 document.addEventListener('DOMContentLoaded', ()=>{
     switchTabs('home-content', 'home-tab');
@@ -19,6 +21,12 @@ locationTabBtn.addEventListener('click', () => {
 cartTabBtn.addEventListener('click', () => {
     window.location.hash = '#cart-content';
 });
+coffeeTabBtn.addEventListener('click', () => {
+    window.location.hash = '#coffee-content';
+});
+pastryTabBtn.addEventListener('click', () => {
+    window.location.hash = '#pastry-content';
+});
 
 window.onhashchange = function() {
     switch(window.location.hash) {
@@ -33,6 +41,12 @@ window.onhashchange = function() {
             break;
         case '#cart-content':
             switchTabs('cart-content', 'cart-tab');
+            break;
+        case '#coffee-content':
+            switchTabs('coffee-content', 'coffee-tab');
+            break;
+        case '#pastry-content':
+            switchTabs('pastry-content', 'pastry-tab');
             break;
     }
 };

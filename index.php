@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>yuri cafe</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="assets/dist/css/styles.css">
     </head>
 
 <body>
@@ -16,15 +15,15 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" id="home-tab">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" id="home-tab">Home <span class="sr-only"></span></a></li>
                     <li class="nav-item"><a class="nav-link" id="location-tab">Location</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" id="menu-tab" >Menu</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Coffee</a></li>
-                            <li><a class="dropdown-item" href="#!">Pastry</a></li>
+                            <li><a class="dropdown-item" id="coffee-tab">Coffee</a></li>
+                            <li><a class="dropdown-item" id="pastry-tab">Pastry</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -53,6 +52,12 @@
         </div>
         <div class="tab-content" id="cart-content">
             <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/shoppingcart.php">
+        </div>
+        <div class="tab-content" id="coffee-content">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/coffee.html">
+        </div>
+        <div class="tab-content" id="pastry-content">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/pastry.php">
         </div>
     </div>
 
