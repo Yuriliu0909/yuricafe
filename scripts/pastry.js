@@ -1,6 +1,6 @@
 const productsView = document.getElementById('products-view');
 
-postData('/yuricafe/services/service-pastry.php',{req:'menu'} ).then((response)=>{
+postData('/yuricafe/services/service-main.php',{req:'menu'} ).then((response)=>{
     let contents = '';
     response.forEach((res)=>{
         contents += '<div class="col mb-5">\n' +

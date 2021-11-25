@@ -1,27 +1,22 @@
 <?php
 $_POST = json_decode(file_get_contents('php://input'), true);
-
-$conn = mysqli_connect("localhost", "root", "", "yuricafe");;
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include ('db-config.php');
 $results = array();
 
 if($_POST['req'] == 'menu') {
-    $sql = "SELECT * FROM coffee";
-
-//    $sql = "SELECT * FROM pastry";
+    $sql = "SELECT * FROM coffee UNION ALL SELECT * FROM pastry";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            $data = array('id'=>$row['id'], 'name'=>$row['name'],
-                'quantity'=>$row['quantity'], 'price'=>$row['price'],'images'=>$row['images']);
+            $data = array('id'=>$row['id'], 'name'=>$row['name'], 'quantity'=>$row['quantity'], 'price'=>$row['price']);
             $results[] = $data;
         }
     }
     $conn->close();
     echo json_encode($results);
+
+    //pass data back to database
 } else if($_POST['req'] == 'order') {
     $sql = "INSERT INTO shoppingcart (order_id, item_id, quantity,price) VALUES (1, " . $_POST['item_id'] . ",".$_POST['quantity'].",".$_POST['price'].")";
     if($conn->query($sql) === TRUE) {
@@ -31,7 +26,6 @@ if($_POST['req'] == 'menu') {
         $msg = array('status'=>$conn->error);
         echo json_encode($msg);
     }
-
 }
 
 
