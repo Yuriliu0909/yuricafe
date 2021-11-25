@@ -38,8 +38,7 @@
         </div>
     </nav>
 
-
-    <div id="tabcontent" class="container-fluid" >
+    <!-- tab content-->
         <div  class="tab-content" id="home-content">
             <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/home-tab-contents.php">
         </div>
@@ -59,19 +58,20 @@
         <div class="tab-content" id="pastry-content">
             <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/pastry.php">
         </div>
-    </div>
+
 
     <script src="scripts/tabController.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- And here is our main footer that is used across all the pages of our website -->
     <?php require_once "layouts/function.php"?>
+
     <footer style="position: fixed; bottom:0;margin-top: 0">
         <?php echo make_copyright("Yuri");?>
     </footer>
 </body>
 </html>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

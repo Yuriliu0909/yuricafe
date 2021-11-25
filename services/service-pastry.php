@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 $results = array();
 
 if($_POST['req'] == 'menu') {
-    $sql = "SELECT * FROM coffee";
+    $sql = "SELECT * FROM pastry";
 //    $sql = "SELECT * FROM pastry";
     $result = $conn->query($sql);
 

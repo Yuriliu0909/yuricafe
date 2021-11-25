@@ -1,12 +1,9 @@
-<!--The div element for the map -->
-    <div id="map">
-    <script src="../scripts/map.js"></script>
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgAFPcYBZfYnrB3aD5EK5qVA5toZj_Cso&callback=initMap&libraries=&v=weekly"
-            async>
-    </script>
-    </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<iframe id="map"  style="border:0" loading="lazy" allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJy3TpSfyxOG0RcLQTomPvAAo&key=AIzaSyA2R2t03PiHkPhna_0HIxMZWXQxokn18W8"></iframe>
+</html>
 
     <style ="text/css">
     /* Set the size of the div element that contains the map */

@@ -6,7 +6,7 @@ const coffeeTabBtn = document.getElementById('coffee-tab');
 const pastryTabBtn = document.getElementById('pastry-tab');
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    switchTabs('home-content', 'home-tab');
+    switchTabs('home-content');
 });
 
 homeTabBtn.addEventListener('click', () => {
@@ -31,29 +31,28 @@ pastryTabBtn.addEventListener('click', () => {
 window.onhashchange = function() {
     switch(window.location.hash) {
         case '#home-content':
-            switchTabs('home-content' , 'home-tab');
+            switchTabs('home-content' );
             break;
         case '#menu-content':
-            switchTabs('menu-content', 'menu-tab');
+            switchTabs('menu-content');
             break;
         case '#location-content':
-            switchTabs('location-content', 'location-tab');
+            switchTabs('location-content');
             break;
         case '#cart-content':
-            switchTabs('cart-content', 'cart-tab');
+            switchTabs('cart-content');
             break;
         case '#coffee-content':
-            switchTabs('coffee-content', 'coffee-tab');
+            switchTabs('coffee-content');
             break;
         case '#pastry-content':
-            switchTabs('pastry-content', 'pastry-tab');
+            switchTabs('pastry-content');
             break;
     }
 };
 
-function switchTabs(tabID, headerID) {
+function switchTabs(tabID) {
     let tabContainers = document.getElementsByClassName('tab-content');
-    let headerButtons = document.getElementsByClassName('nav-item');
     for(let i = 0; i < tabContainers.length; i++) {
         if(tabID !== tabContainers[i].id) {
             tabContainers[i].style.display = 'none';
@@ -61,12 +60,4 @@ function switchTabs(tabID, headerID) {
             tabContainers[i].style.display = 'block';
         }
     }
-    //
-    // for(let i = 0; i < headerButtons.length; i++) {
-    //     if(headerID === headerButtons[i].id) {
-    //         headerButtons[i].style.backgroundColor = 'none';
-    //     } else {
-    //         headerButtons[i].style.backgroundColor = '#555';
-    //     }
-    // }
 }

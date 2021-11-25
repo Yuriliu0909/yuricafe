@@ -1,8 +1,7 @@
 const productsView = document.getElementById('products-view');
 
-postData('/yuricafe/services/service-main.php','/yuricafe/services/service-pastry.php',{req:'menu'} ).then( async (response)=>{
+postData('/yuricafe/services/service-pastry.php',{req:'menu'} ).then((response)=>{
     let contents = '';
-    console.log(response);
     response.forEach((res)=>{
         contents += '<div class="col mb-5">\n' +
             '                    <div class="card h-100">\n' +
@@ -29,35 +28,17 @@ postData('/yuricafe/services/service-main.php','/yuricafe/services/service-pastr
     updateMenuUI(contents);
 });
 
-
 function updateMenuUI(contents) {
     productsView.innerHTML = contents;
 }
 
-async function postData(url1,url2,data) {
-    // Promise.all([promise1, promise2, promise3]).then((values)
-
-    const options = {
+async function postData(url, data) {
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    };
-    const promise1 = fetch(url1,options).then(
-        function (response){
-            return response.json();
-        }
-    )
-    const promise2 = fetch(url2,options).then(
-        function (response){
-            return response.json();
-        }
-    )
-    const result = await Promise.all([promise1, promise2]).then((values) => {
-        console.log([...values[0],...values[1]]);
-        return [...values[0],...values[1]];
     });
-    return result;
+    return response.json();
 }
-

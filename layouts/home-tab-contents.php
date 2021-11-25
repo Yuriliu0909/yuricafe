@@ -1,7 +1,7 @@
 <div>
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- sliced pages -->
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="position: center;margin-top: 0">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -15,7 +15,7 @@
                     <div class="carousel-caption text-start">
                         <h1>Pick Me.</h1>
                         <p>pick awesome goods for lovely day.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Store</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="menu.php" id="store-btn">Store</a></p>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="carousel-caption">
                         <h1>Find Me.</h1>
                         <p>a heart warm place always open to you.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Location</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="location.php" id="location-btn">Location</a></p>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <div class="carousel-caption text-end">
                         <h1>Shopping Cart.</h1>
                         <p>check what you've got and think more.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">go shopping</a></p>
+                        <p><a class="btn btn-lg btn-primary" href="shoppingcart.php" id="shopping-btn">go shopping</a></p>
                     </div>
                 </div>
             </div>
@@ -50,6 +50,17 @@
         </button>
     </div>
 
+    <!-- tab pages -->
+        <div class="tab-content" id="menu-content">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/menu.php">
+        </div>
+        <div class="tab-content" id="location-content">
+            <h5 style="align-self: auto;margin-top: 10px">No.999 Yuri Street,Te Aro,Wellington</h5>
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/location.php">
+        </div>
+        <div class="tab-content" id="cart-content">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/shoppingcart.php">
+        </div>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </div>
