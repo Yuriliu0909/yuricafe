@@ -50,17 +50,6 @@
         </button>
     </div>
 
-    <!-- tab pages -->
-        <div class="tab-content" id="menu-content">
-            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/menu.php">
-        </div>
-        <div class="tab-content" id="location-content">
-            <h5 style="align-self: auto;margin-top: 10px">No.999 Yuri Street,Te Aro,Wellington</h5>
-            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/location.php">
-        </div>
-        <div class="tab-content" id="cart-content">
-            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/shoppingcart.php">
-        </div>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
 </div>

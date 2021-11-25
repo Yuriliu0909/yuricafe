@@ -1,5 +1,6 @@
 const productsView = document.getElementById('products-view');
 
+//function for instead default menu
 postData('/yuricafe/services/service-main.php','/yuricafe/services/service-pastry.php',{req:'menu'} ).then( async (response)=>{
     let contents = '';
     console.log(response);
@@ -20,7 +21,7 @@ postData('/yuricafe/services/service-main.php','/yuricafe/services/service-pastr
             '                        </div>\n' +
             '                        <!-- Product actions-->\n' +
             '                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">\n' +
-            '                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>\n' +
+            '                            <div class="text-center"><button onclick="addItemToCart('+res['id']+')" class="btn btn-outline-dark mt-auto">View options</button></div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
             '                </div>';
@@ -34,9 +35,8 @@ function updateMenuUI(contents) {
     productsView.innerHTML = contents;
 }
 
+//update client-end by json
 async function postData(url1,url2,data) {
-    // Promise.all([promise1, promise2, promise3]).then((values)
-
     const options = {
         method: 'POST',
         headers: {
@@ -60,4 +60,25 @@ async function postData(url1,url2,data) {
     });
     return result;
 }
+
+function addItemToCart(productID) {
+    console.log('clicked');
+    let order = {req:'order',item_id:productID,quantity:1,price:10};
+    postData('/yuricafe/services/service-main.php', order).then((response)=>{
+        console.log(response);
+    });
+}
+
+async function postData(url,data) {
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    return response.json();
+
+}
+
 

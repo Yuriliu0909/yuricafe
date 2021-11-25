@@ -9,6 +9,7 @@ $results = array();
 
 if($_POST['req'] == 'menu') {
     $sql = "SELECT * FROM coffee";
+
 //    $sql = "SELECT * FROM pastry";
     $result = $conn->query($sql);
 
@@ -21,6 +22,16 @@ if($_POST['req'] == 'menu') {
     }
     $conn->close();
     echo json_encode($results);
+} else if($_POST['req'] == 'order') {
+    $sql = "INSERT INTO shoppingcart (order_id, item_id, quantity,price) VALUES (1, " . $_POST['item_id'] . ",".$_POST['quantity'].",".$_POST['price'].")";
+    if($conn->query($sql) === TRUE) {
+        $msg = array('status'=>'order_added_successfully');
+        echo json_encode($msg);
+    } else {
+        $msg = array('status'=>$conn->error);
+        echo json_encode($msg);
+    }
+
 }
 
 

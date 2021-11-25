@@ -1,4 +1,5 @@
 <?php
+//json decode from database
 $_POST = json_decode(file_get_contents('php://input'), true);
 
 $conn = mysqli_connect("localhost", "root", "", "yuricafe");;
@@ -7,9 +8,9 @@ if ($conn->connect_error) {
 }
 $results = array();
 
+//json encode into array
 if($_POST['req'] == 'menu') {
     $sql = "SELECT * FROM pastry";
-//    $sql = "SELECT * FROM pastry";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

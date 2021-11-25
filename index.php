@@ -11,14 +11,14 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">Yuri Cafe</a>
+            <a class="navbar-brand" >Yuri Cafe</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link active" id="home-tab">Home <span class="sr-only"></span></a></li>
                     <li class="nav-item"><a class="nav-link" id="location-tab">Location</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown"role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" id="menu-tab" >Menu</a></li>
                             <li><hr class="dropdown-divider" /></li>
@@ -40,7 +40,7 @@
 
     <!-- tab content-->
         <div  class="tab-content" id="home-content">
-            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/home-tab-contents.php">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/home.php">
         </div>
         <div class="tab-content" id="menu-content">
             <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/menu.php">
@@ -56,7 +56,7 @@
             <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/coffee.html">
         </div>
         <div class="tab-content" id="pastry-content">
-            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/pastry.php">
+            <embed style="position:fixed; width:100%; height:85%; overflow:hidden;" type="text/html" src="layouts/pastry.html">
         </div>
 
 

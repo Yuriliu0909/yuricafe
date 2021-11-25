@@ -13,14 +13,12 @@
             <div id="products-view" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <div class="col mb-5">
                     <div class="card h-100">
-                        <!-- Product image-->
-
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center" id="lattee name">
-                                <!-- Product name-->
+                                <!-- Product name default-->
                                 <h5 class="fw-bolder" id="lattee price">Fancy Product</h5>
-                                <!-- Product price-->
+                                <!-- Product price default-->
                                 $40.00 - $80.00
                             </div>
                         </div>
