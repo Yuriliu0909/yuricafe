@@ -67,7 +67,7 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- And here is our main footer that is used across all the pages of our website -->
+    <!-- And here is  main footer that is used across all the pages of  website -->
     <?php require_once "layouts/function.php"?>
 
     <footer style="position: fixed; bottom:0;margin-top: 0">

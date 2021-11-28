@@ -1,6 +1,6 @@
 const productsView = document.getElementById('products-view');
 
-postData('/yuricafe/services/service-main.php',{req:'menu'} ).then((response)=>{
+postData('/yuricafe/services/service-main.php',{req:'coffee_menu'} ).then((response)=>{
     let contents = '';
     response.forEach((res)=>{
         contents += '<div class="col mb-5">\n' +
@@ -46,7 +46,7 @@ async function postData(url, data) {
 function addItemToCart(productID) {
     console.log('clicked');
     let order = {req:'order',item_id:productID,quantity:1,price:10};
-    postData('/yuricafe/services/service-main.php', order).then((response)=>{
+    postData('/services/service-main.php', order).then((response)=>{
         console.log(response);
     });
 }

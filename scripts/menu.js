@@ -14,12 +14,12 @@ postData('/yuricafe/services/service-main.php',{req:'menu'} ).then((response)=>{
             '                        <div class="card-body p-4">\n' +
             '                            <div class="text-center" >\n' +
             '                                <!-- Product name-->\n' +
-            '                                <h5 class="fw-bolder" >'+res['name']+'</script></h5>'+res['price'] +'\n' +
+            '                                <h5 class="fw-bolder" >'+res['name']+'</script></h5><label >quantity:</label><input type="text" id="quantity" value="1" >'+res['quantity']+'</script></input>'+res['price'] +'\n' +
             '                            </div>\n' +
             '                        </div>\n' +
             '                        <!-- Product actions-->\n' +
             '                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">\n' +
-            '                            <div class="text-center"><button onclick="addItemToCart('+res['id']+')" class="btn btn-outline-dark mt-auto" href="#">View options</bi></div>\n' +
+            '                            <div class="text-center"><button onclick="addItemToCart('+res['id']+')" class="btn btn-outline-dark mt-auto" >Add to Cart</bi></div>\n' +
             '                        </div>\n' +
             '                    </div>\n' +
             '                </div>';
